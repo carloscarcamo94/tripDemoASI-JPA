@@ -24,6 +24,7 @@ public class Trip {
 	private String estatus;
 	private String imagen;
 	private String detalles;
+	private int calificacion;
 	
 	@OneToOne
 	@JoinColumn(name = "idCategoria")
@@ -83,6 +84,10 @@ public class Trip {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
-	
-	
+	public int getCalificacion() {
+		return calificacion;
+	}
+	public void setCalificacion(int calificacion) {
+		this.calificacion = calificacion;
+	}
 }

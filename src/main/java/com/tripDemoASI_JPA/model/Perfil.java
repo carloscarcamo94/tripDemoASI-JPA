@@ -1,7 +1,5 @@
 package com.tripDemoASI_JPA.model;
 
-import java.util.Date;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,16 +7,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "categoria")
-public class Categoria {
+@Table(name = "perfil")
+public class Perfil {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nombre;
-	private String descripcion;
-	private boolean activo;
-	private Date fecha;
 	
 	public int getId() {
 		return id;
@@ -31,24 +26,6 @@ public class Categoria {
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-	public String getDescripcion() {
-		return descripcion;
-	}
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
-	public boolean isActivo() {
-		return activo;
-	}
-	public void setActivo(boolean activo) {
-		this.activo = activo;
-	}
-	public Date getFecha() {
-		return fecha;
-	}
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
 	}
 	
 }
